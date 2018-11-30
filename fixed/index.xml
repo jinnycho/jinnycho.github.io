@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jinny Cho</title>
-    <link>https://jinnycho.github.io/</link>
-    <description>Recent content on Jinny Cho</description>
+    <title>Fixed on Jinny Cho</title>
+    <link>https://jinnycho.github.io/fixed/</link>
+    <description>Recent content in Fixed on Jinny Cho</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 30 Nov 2018 16:14:46 -0500</lastBuildDate>
     
-	<atom:link href="https://jinnycho.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jinnycho.github.io/fixed/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://jinnycho.github.io/fixed/about/</guid>
       <description>Hello world. This is Eunjin.</description>
-    </item>
-    
-    <item>
-      <title>My First Post</title>
-      <link>https://jinnycho.github.io/blog/my-first-post/</link>
-      <pubDate>Fri, 30 Nov 2018 15:58:05 -0500</pubDate>
-      
-      <guid>https://jinnycho.github.io/blog/my-first-post/</guid>
-      <description>hello.</description>
     </item>
     
   </channel>
