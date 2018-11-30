@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jinnycho.github.io/fixed/about/</loc>
+    <loc>https://jinnycho.github.io/about/</loc>
     <lastmod>2018-11-30T16:14:46-05:00</lastmod>
   </url>
   
@@ -20,12 +20,6 @@
   
   <url>
     <loc>https://jinnycho.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jinnycho.github.io/fixed/</loc>
-    <lastmod>2018-11-30T16:14:46-05:00</lastmod>
     <priority>0</priority>
   </url>
   
