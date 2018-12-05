@@ -3,18 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jinnycho.github.io/blog/untitled-1/</loc>
+    <lastmod>2018-12-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jinnycho.github.io/about/</loc>
     <lastmod>2018-11-30T16:14:46-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jinnycho.github.io/blog/my-first-post/</loc>
-    <lastmod>2018-11-30T15:58:05-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jinnycho.github.io/blog/</loc>
-    <lastmod>2018-11-30T15:58:05-05:00</lastmod>
+    <lastmod>2018-12-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -25,7 +25,7 @@
   
   <url>
     <loc>https://jinnycho.github.io/</loc>
-    <lastmod>2018-11-30T16:14:46-05:00</lastmod>
+    <lastmod>2018-12-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
