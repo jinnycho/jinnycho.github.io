@@ -6,10 +6,19 @@
     <description>Recent content on Jinny C</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 07 May 2019 00:48:01 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 18 May 2019 00:48:01 -0500</lastBuildDate>
     
 	<atom:link href="https://jinnycho.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Haru</title>
+      <link>https://jinnycho.github.io/art/haru/</link>
+      <pubDate>Sat, 18 May 2019 00:48:01 -0500</pubDate>
+      
+      <guid>https://jinnycho.github.io/art/haru/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Head First Design Patterns</title>
@@ -39,7 +48,7 @@
     </item>
     
     <item>
-      <title>Untitled 5</title>
+      <title>Untitled 3</title>
       <link>https://jinnycho.github.io/art/untitled-5/</link>
       <pubDate>Fri, 21 Dec 2018 21:29:11 -0500</pubDate>
       
@@ -48,7 +57,7 @@
     </item>
     
     <item>
-      <title>Untitled 4</title>
+      <title>Untitled 2</title>
       <link>https://jinnycho.github.io/art/untitled-4/</link>
       <pubDate>Sun, 16 Dec 2018 19:40:59 -0500</pubDate>
       
@@ -57,7 +66,7 @@
     </item>
     
     <item>
-      <title>Untitled 3</title>
+      <title>Möbius</title>
       <link>https://jinnycho.github.io/art/untitled-3/</link>
       <pubDate>Thu, 13 Dec 2018 22:18:46 -0500</pubDate>
       
@@ -66,7 +75,7 @@
     </item>
     
     <item>
-      <title>Untitled 2</title>
+      <title>Bones</title>
       <link>https://jinnycho.github.io/art/untitled-2/</link>
       <pubDate>Sun, 09 Dec 2018 03:11:39 -0500</pubDate>
       
