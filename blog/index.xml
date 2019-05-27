@@ -6,54 +6,36 @@
     <description>Recent content in Blog on Jinny C</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 13 Dec 2018 22:18:46 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 07 May 2019 00:48:01 -0500</lastBuildDate>
     
 	<atom:link href="https://jinnycho.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Untitled 5</title>
-      <link>https://jinnycho.github.io/blog/untitled-5/</link>
-      <pubDate>Thu, 13 Dec 2018 22:18:46 -0500</pubDate>
+      <title>Head First Design Patterns</title>
+      <link>https://jinnycho.github.io/blog/design-patterns/</link>
+      <pubDate>Tue, 07 May 2019 00:48:01 -0500</pubDate>
       
-      <guid>https://jinnycho.github.io/blog/untitled-5/</guid>
+      <guid>https://jinnycho.github.io/blog/design-patterns/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Untitled 4</title>
-      <link>https://jinnycho.github.io/blog/untitled-4/</link>
-      <pubDate>Wed, 12 Dec 2018 21:01:21 -0500</pubDate>
+      <title>Head First JavaScript</title>
+      <link>https://jinnycho.github.io/blog/javascript/</link>
+      <pubDate>Tue, 05 Mar 2019 00:48:01 -0500</pubDate>
       
-      <guid>https://jinnycho.github.io/blog/untitled-4/</guid>
+      <guid>https://jinnycho.github.io/blog/javascript/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Untitled 3</title>
-      <link>https://jinnycho.github.io/blog/untitled-3/</link>
-      <pubDate>Sun, 09 Dec 2018 03:11:39 -0500</pubDate>
+      <title>Joy of Reading and Sharing</title>
+      <link>https://jinnycho.github.io/blog/begin/</link>
+      <pubDate>Mon, 04 Mar 2019 00:48:01 -0500</pubDate>
       
-      <guid>https://jinnycho.github.io/blog/untitled-3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Untitled 2</title>
-      <link>https://jinnycho.github.io/blog/untitled-2/</link>
-      <pubDate>Sat, 08 Dec 2018 00:48:01 -0500</pubDate>
-      
-      <guid>https://jinnycho.github.io/blog/untitled-2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Untitled 1</title>
-      <link>https://jinnycho.github.io/blog/untitled-1/</link>
-      <pubDate>Thu, 06 Dec 2018 19:56:29 -0500</pubDate>
-      
-      <guid>https://jinnycho.github.io/blog/untitled-1/</guid>
-      <description></description>
+      <guid>https://jinnycho.github.io/blog/begin/</guid>
+      <description>I would like to share books I&amp;rsquo;ve been reading or things I learned in this blog. Thanks!</description>
     </item>
     
   </channel>
