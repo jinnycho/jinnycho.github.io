@@ -1070,13 +1070,25 @@ margin-left: -4%;
 
 <p><img src="https://user-images.githubusercontent.com/45345735/61598538-6c0e8300-abed-11e9-9072-f076c25a2b7d.gif" height="300" /></p>
 
-<p>For the past decades, there have been a number of large-scale nuclear accidents around the world that devastated lives of millions of people. Especially as a Korean who was born after 1990, Fukushima Daiichi accident is by far one of the most suspicious and concerning nuclear accidents. This just happened in 2011 in Fukushima Prefecture, 220km away from Tokyo. (It is about the distance between DC and Philadelphia!) I heard that this accident was as severe (or worse) as Chernobyl and the number of people who are diagnosed with leukemia or cancer soared. However, strangely no one really knows what really happened and about 30 million tourists still go to Japan. There will be even Olympics in 2020. I was curious to see the world map and personally check which parts should I particularly be careful.</p>
+<ul>
+<li><strong>Curiosity</strong> - As a Korean who was born after 1990, Fukushima Daiichi accident is by far one of the most suspicious and concerning nuclear accidents. This just happened in 2011 in Fukushima Prefecture, 220km away from Tokyo. (That is about the distance between DC and Philadelphia!) I heard that this accident was as severe (or worse) as Chernobyl. However, strangely no one really knows what really happened and about 30 million tourists still go to Japan. There will be even Olympics in 2020. I was curious to see the world map and personally check which parts should I particularly be careful.</li>
+<li><strong>More control</strong>: The existing map in Safecast doesn&rsquo;t show the exact radiation values. The colors do explain at some extent the approximate values but still I wished to check the exact values. Moreover, having my own map allows me to have more power like being able to see the transitions over time etc.</li>
+<li><strong>Mapbox Map</strong> - The <a href="http://safecast.org/tilemap/">original Map in Safecast</a> uses Google Maps. I wanted to see in Mapbox Maps.</li>
+</ul>
 
-<h2 id="quick-looks">Quick Looks</h2>
+<h2 id="quick-look">Quick Look</h2>
 
 <p><img src="https://user-images.githubusercontent.com/45345735/61601909-91a78680-ac05-11e9-8754-913b6941ae4d.gif" width="500"></p>
 
-<h2 id="technology">Technology</h2>
+<p>As a reminder, the map is not 100% accurate because</p>
+
+<ul>
+<li>it used clustering to extract the essense of the data. So depending on the number of clusters, the shape of the map can potentially change.</li>
+<li>It can be also quite biased because these measurements depend on the number of people who have the device that measures the radiation values. So even if there&rsquo;s not much radiation in China, that doesn&rsquo;t necessarily mean there&rsquo;s no radiation but it could be just that there&rsquo;re not enough people that have the device to measure radiation values.</li>
+<li>Generally, the accuracy is close to what the original Safecast Map shows.</li>
+</ul>
+
+<h2 id="technical-details">Technical Details</h2>
 
 <h3 id="1-data">1. Data</h3>
 
@@ -1148,14 +1160,8 @@ margin-left: -4%;
 
 <ul>
 <li>Unsurprisingly many parts of Japan is contaminated. Especially near Fukushima, the radation value (colored black) is above the warning level (which is above 100).</li>
-<li>Korea also have some locations with radioactivity measurements (not as a severe &amp; frequent as Japan but still). There was no known nuclear accidents. My hypothesis is I remember Korea imported a lot of sands &amp; trash from Japan when they built apartment buildings and roads. I wonder <em>if</em> the sand they imported is actually from Fukushima area.</li>
+<li>Korea also has some locations with radioactivity measurements detected (not as severe &amp; frequent as Japan but still). There was no known nuclear accidents. My hypothesis is I remember Korea imported a lot of sands &amp; trash from Japan when they built apartment buildings and roads. I wonder <em>if</em> the sand they imported is actually from Fukushima area.</li>
 <li>Europe also has a lot of radiation values measured very extensively across the continent. The severity of radiation is not that high compared to Japan, but it&rsquo;s quite surprising that there are such a lot of measurements.</li>
-<li>The map is not 100% accurate because
-
-<ul>
-<li>it used clustering to extract the essense of the data. So depending on the number of clusters, the shape of the map can potentially change.</li>
-<li>It can be also quite biased because these measurements depend on the number of people who have the device that measures the radiation values. So even if there&rsquo;s not much radiation in China, that doesn&rsquo;t necessarily mean there&rsquo;s no radiation but it could be just that there&rsquo;re not enough people that have the device to measure radiation values.</li>
-</ul></li>
 </ul>
 
 <h3 id="improvements">Improvements</h3>
