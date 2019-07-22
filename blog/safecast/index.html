@@ -1080,14 +1080,6 @@ margin-left: -4%;
 
 <p><img src="https://user-images.githubusercontent.com/45345735/61601909-91a78680-ac05-11e9-8754-913b6941ae4d.gif" width="500"></p>
 
-<p>As a reminder, the map is not 100% accurate because</p>
-
-<ul>
-<li>it used clustering to extract the essense of the data. So depending on the number of clusters, the shape of the map can potentially change. Also there&rsquo;re some problems of outliers.</li>
-<li>It can be also quite biased because these measurements depend on the number of people who have the device that measures the radiation values. So even if there&rsquo;s not much radiation in China, that doesn&rsquo;t necessarily mean there&rsquo;s no radiation but it could be just that there&rsquo;re not enough people that have the device to measure radiation values.</li>
-<li>Generally, the accuracy is close to what the original Safecast Map shows.</li>
-</ul>
-
 <h2 id="technical-details">Technical Details</h2>
 
 <h3 id="1-data">1. Data</h3>
@@ -1141,7 +1133,16 @@ margin-left: -4%;
 <ul>
 <li>🗺 <strong>Mapbox gl-js</strong>: I used Mapbox gl-js as a base map to render the radiation data. I liked that it has a <em>light</em> version where there&rsquo;s no color, so I can see the radiation severity more quickly.</li>
 <li>🍹 <strong>D3</strong>: D3 has very cool visualization functions that work really smoothly with html, css and JavaScript. I used D3 to show points and values when hovered.</li>
-<li>🍓 <strong>Node.js, Express &amp; JavaScript</strong>: Node.js + Express makes building web application framework so much simpler. Also JavaScript is a nice language for web pages that also works well with Mapbox gl-js, D3 and Node.js.</li>
+
+<li><p>🍓 <strong>Node.js, Express &amp; JavaScript</strong>: Node.js + Express makes building web application framework so much simpler. Also JavaScript is a nice language for web pages that also works well with Mapbox gl-js, D3 and Node.js.</p></li>
+
+<li><p>As a reminder, the map is not 100% accurate because</p>
+
+<ul>
+<li>it used clustering to extract the essense of the data. So depending on the number of clusters, the shape of the map can potentially change. Also there&rsquo;re some problems of outliers.</li>
+<li>It can be also quite biased because these measurements depend on the number of people who have the device that measures the radiation values. So even if there&rsquo;s not much radiation in China, that doesn&rsquo;t necessarily mean there&rsquo;s no radiation but it could be just that there&rsquo;re not enough people that have the device to measure radiation values.</li>
+<li>Generally, the accuracy is close to what the original Safecast Map shows.</li>
+</ul></li>
 </ul>
 
 <h2 id="usage">Usage</h2>
