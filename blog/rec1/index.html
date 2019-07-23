@@ -12,9 +12,9 @@
 <meta property="og:site_name" content="Jinny C" />
 <meta property="og:locale" content="en-US" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jinnycho.github.io/blog/safecast/" />
-<meta property="og:title" content="👨🏻‍💻 Radiation Map of the World v1.0" />
-<meta property="twitter:title" content="👨🏻‍💻 Radiation Map of the World v1.0">
+<meta property="og:url" content="https://jinnycho.github.io/blog/rec1/" />
+<meta property="og:title" content="👨🏻‍💻 Book Recommendation v1.0" />
+<meta property="twitter:title" content="👨🏻‍💻 Book Recommendation v1.0">
 
     <meta property="twitter:card" content="summary">
 
@@ -24,10 +24,10 @@
 <title>
 
 
-     Jinny C - 👨🏻‍💻 Radiation Map of the World v1.0 
+     Jinny C - 👨🏻‍💻 Book Recommendation v1.0 
 
 </title>
-<link rel="canonical" href="https://jinnycho.github.io/blog/safecast/">
+<link rel="canonical" href="https://jinnycho.github.io/blog/rec1/">
 
 
 <style media="screen">
@@ -1034,19 +1034,19 @@ margin-left: -4%;
                     <div class="page-heading">
 
     
-    👨🏻‍💻 Radiation Map of the World v1.0
+    👨🏻‍💻 Book Recommendation v1.0
     
 
 </div>
 
                 </div>
                 <div class="meta">
-                    <div class="date" title="Sun Jul 21 2019 00:58:01 -0500">Jul 21, 2019</div>
+                    <div class="date" title="Mon Jul 22 2019 00:48:01 -0500">Jul 22, 2019</div>
                     
                         
                     
                     
-                    <div class="reading-time middot">5 minute read</div>
+                    <div class="reading-time middot">2 minute read</div>
                     
                     <div class="tags">
                         <ul>
@@ -1066,111 +1066,54 @@ margin-left: -4%;
     
     
 
-<h2 id="motivation">Motivation</h2>
+<h2 id="introduction">Introduction</h2>
 
-<p><img src="https://user-images.githubusercontent.com/45345735/61598538-6c0e8300-abed-11e9-9072-f076c25a2b7d.gif" height="300" /></p>
+<p>There are 3 major approaches for recommendation systems: content-based, collaborative, and hybrid.</p>
 
 <ul>
-<li><strong>Curiosity</strong> - As a Korean who was born after 1990, Fukushima Daiichi accident is by far one of the most suspicious and concerning nuclear accidents. This just happened in 2011 in Fukushima Prefecture, 220km away from Tokyo. (That is about the distance between DC and Philadelphia!) I heard that this accident was as severe (or worse) as Chernobyl. However, strangely no one really knows what really happened and about 30 million tourists still go to Japan. There will be even Olympics in 2020. I was curious to see the world map and personally check which parts should I particularly be careful.</li>
-<li><strong>More control</strong>: The existing map in Safecast doesn&rsquo;t show the exact radiation values. The colors do explain at some extent the approximate values but still I wished to check the exact values. Moreover, having my own map allows me to have more power like being able to see the transitions over time etc.</li>
-<li><strong>Mapbox Map</strong> - The <a href="http://safecast.org/tilemap/">original Map in Safecast</a> uses Google Maps. I wanted to see in Mapbox Maps, which has a light version that doesn&rsquo;t have a lot of colors.</li>
+<li><p><strong>Content-based</strong>:</p>
+
+<ul>
+<li>Recommend items to a user that are similar to the ones that user preferred in the past.</li>
+<li>For example, if Nancy likes &lt;28 Days Later&gt; 🧟‍♂️, we analyze the contents of the this movie like genre, country, year etc. After that analysis, we can deduce that Nancy will probably like &lt;Train to Busan&gt; as well.</li>
+</ul></li>
+
+<li><p><strong>Collaborative</strong>:</p>
+
+<ul>
+<li>predicts user&rsquo;s preferences by analyzing relationship between users and interdependcies among them.</li>
+<li>For example, we know Nancy and Ann are very similar in terms of cultural, seasonal and many other preferences. Then if Nancy likes Zombie movies, it&rsquo;s likely that Ann will like that as well.</li>
+</ul></li>
+
+<li><p><strong>Hybrid</strong>: meld content-based and collaborative approaches, which have complementary strengths and weaknesses.</p></li>
 </ul>
-
-<h2 id="quick-look">Quick Look</h2>
-
-<p><img src="https://user-images.githubusercontent.com/45345735/61601909-91a78680-ac05-11e9-8754-913b6941ae4d.gif" width="500"></p>
 
 <h2 id="technical-details">Technical Details</h2>
 
-<h3 id="1-data">1. Data</h3>
-
-<table>
-<thead>
-<tr>
-<th align="center"><strong>info</strong></th>
-<th align="center"><strong>details</strong></th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="center">imported from</td>
-<td align="center"><a href="https://blog.safecast.org/downloads/">Safecast Org</a></td>
-</tr>
-
-<tr>
-<td align="center">format</td>
-<td align="center">csv</td>
-</tr>
-
-<tr>
-<td align="center">properties</td>
-<td align="center">captured_time, lat, lon, value, unit&hellip;</td>
-</tr>
-
-<tr>
-<td align="center">size</td>
-<td align="center">16GB</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="2-data-processing">2. Data Processing</h3>
-
-<p>The size of the dataset is 16GB. This is way above the limit that <a href="https://docs.mapbox.com/api/maps/#uploads-api-restrictions-and-limits">Mapbox allows</a>, which is 1GB. So I came up with my personal solution to visualize the data on the map.</p>
+<h3 id="1-data-processing">1. Data Processing</h3>
 
 <ul>
-<li>🍄 <strong>Spark</strong> - It is a framework we can use for programming distributed processing of large dataset <em>very fast</em>. It is known to be 100x faster than Hadoop MR in memory and DAG engine optimizes the workflow. Considering the size of the dataset &amp; the possibility of growing, Spark seems like a good use of my time.</li>
-<li>🔮 <strong>Scala</strong> - There are a few languages that we can choose to use Spark. People tend to use Python for its familiarity in terms of programming syntax. However, after some research, I realized that Scala is a lot more efficient, fast and stable. So I decided to write in Scala.</li>
-<li>💎 <strong>Structured Data</strong> - There is a trend to use structured data more because of its efficiency, better interoprability (e.g. MLLib, Spark Streaming) and simplicity. So throughtout the course, I use <code>SparkSession</code>, DataFrames and SparkSQL.</li>
-<li>🌱 <strong>sbt</strong>: There are 3 dependencies in this project but it can be larger. So I tried to package up the dependencies using sbt. Using sbt, I can easily define the dependencies and their versions.</li>
-<li>💅 <strong>Data cleaning</strong>: There are a lot of properties that are not very necessary (e.g. <code>location_name</code>, <code>unit</code>, <code>device_ID</code> etc). I pruned all of those to make the dataset more compact. I also splitted the dataset into 5 parts so each is around 3GB instead of 15GB. This is to reduce the processing time. But this splitting is probably not necessary if you have more machines or time. Reducing to 3GB enabled me to receive the results in 15 mins and 3GB is still way above the limit that <a href="https://docs.mapbox.com/api/maps/#uploads-api-restrictions-and-limits">the corporate set</a>.</li>
-<li>✨ <strong>MLLib</strong>: MLLib is an Apache Spark&rsquo;s scalable machine learning library. I used K-Means Clustering because of multiple reasons. First, the dataset is too larget to render on the map. Just 1GB of data is already tens of millions of rows. Second, we have a lot of redundant radiation measurments in one same spot. In that case, we should have some logic to choose one. <code>captured_time</code> can be one of them (e.g. prefer more recent data) but it can be wrong (e.g. the device might be broken). Also it&rsquo;s quite annoying to dedupe the data and sort by date. As a result, I think clustering is a good way to extract the truth in that region in a relatively quick way given such a large dataset.</li>
+<li>Used BookCrossing and Amazon Book Reviews.</li>
+<li>Data is very sparse since users don&rsquo;t tend to rate or read that many books. To alleviate this sparsity, we used the intersection (by books) of these two datasets for our project → increase the ratings each book has.</li>
+<li>Partitioned data into training, validation and testing for testing purposes.</li>
 </ul>
 
-<h3 id="3-visualization">3. Visualization</h3>
+<h3 id="2-collaborative-filtering">2. Collaborative Filtering</h3>
 
 <ul>
-<li>🗺 <strong>Mapbox gl-js</strong>: I used Mapbox gl-js as a base map to render the radiation data. I liked that it has a <em>light</em> version where there&rsquo;s no color, so I can see the radiation severity more quickly.</li>
-<li>🍹 <strong>D3</strong>: D3 has very cool visualization functions that work really smoothly with html, css and JavaScript. I used D3 to show points and values when hovered.</li>
-
-<li><p>🍓 <strong>Node.js, Express &amp; JavaScript</strong>: Node.js + Express makes building web application framework so much simpler. Also JavaScript is a nice language for web pages that also works well with Mapbox gl-js, D3 and Node.js.</p></li>
-
-<li><p>As a reminder, the map is not 100% accurate because</p>
-
-<ul>
-<li>it used clustering to extract the essense of the data. So depending on the number of clusters, the shape of the map can potentially change. Also there&rsquo;re some problems of outliers.</li>
-<li>It can be also quite biased because these measurements depend on the number of people who have the device that measures the radiation values. So even if there&rsquo;s not much radiation in China, that doesn&rsquo;t necessarily mean there&rsquo;s no radiation but it could be just that there&rsquo;re not enough people that have the device to measure radiation values.</li>
-<li>Generally, the accuracy is close to what the original Safecast Map shows.</li>
-</ul></li>
+<li>(1) <ins>Create Utility Matrix</ins>: Create a utility matrix that contains information about books, ratings and users. The matrix is of type <code>scipy.csr_matrix</code> for better efficiency.</li>
+<li>(2) <ins>Generate predictions</ins>: Use KNN (K-Nearest Neighbor) algorithm to predic ratings. Experimented if normalization of the dataset improves the accuracy of the predictions.</li>
+<li>(3) <ins>Evaluation</ins>: Compute RMSE (Root Mean Square Error).</li>
 </ul>
 
-<h2 id="usage">Usage</h2>
-
-<p>In order to actually see the maps:</p>
+<h3 id="3-content-based-filtering">3. Content-based Filtering</h3>
 
 <ul>
-<li>Clone <a href="https://github.com/jinnycho/safecast-radioactivity">https://github.com/jinnycho/safecast-radioactivity</a></li>
-<li>Run <code>npm start</code></li>
-<li>Open <a href="http://localhost:3000">http://localhost:3000</a></li>
-</ul>
-
-<h2 id="thoughts">Thoughts</h2>
-
-<h3 id="about-the-map">About the map</h3>
-
-<ul>
-<li>Unsurprisingly many parts of Japan is contaminated. Especially near Fukushima, the radation value (colored black) is above the warning level (which is above 100).</li>
-<li>Korea also has some locations with radioactivity measurements detected (not as severe &amp; frequent as Japan but still). There was no known nuclear accidents. My hypothesis is I remember Korea imported a lot of sands &amp; trash from Japan when they built apartment buildings and roads. I wonder <em>if</em> the sand they imported is actually from Fukushima area.</li>
-<li>Europe also has a lot of radiation values measured very extensively across the continent. The severity of radiation is not that high compared to Japan, but it&rsquo;s quite surprising that there are such a lot of measurements.</li>
-</ul>
-
-<h3 id="improvements">Improvements</h3>
-
-<ul>
-<li>It&rsquo;d be cool to see how radiation measurements change by year or month.</li>
-<li>I&rsquo;d like to keep experimenting/configuring clustering and see what achieves the best result.</li>
-<li>I can try automating the process of updating the dataset.</li>
+<li>(1) <ins>Initial data collection from APIs</ins>: Use both Google Books API and Good Reads API to scrape some contents of the books.</li>
+<li>(2) <ins>Individiual Book Text Aggregation</ins>: Group all text into their own text file by book. Also cleans and lemmatizes the words and removes punctuation.</li>
+<li>(3) <ins>Dictionary Generation</ins>: Makes a dictionary of words, based on which words appear at least a certain number of times in our lemmatized text. This step returns numbers representing their sentiment values.</li>
+<li>(4) <ins>Book Vector Generation</ins>: Makes the modeled-book matrices using the generated dictionaries and cleaned, lemmatized text about the books.</li>
+<li>(5) <ins>Running tests &amp; Generate Predictions</ins></li>
 </ul>
 
 
@@ -1182,15 +1125,10 @@ margin-left: -4%;
                 
                 <div>
                     <img class="icon" src="https://jinnycho.github.io/img/back.svg" alt="back" />
-                    <a href="https://jinnycho.github.io/blog/spark/">✏️ Spark fundamentals</a>
+                    <a href="https://jinnycho.github.io/blog/safecast/">👨🏻‍💻 Radiation Map of the World v1.0</a>
                 </div>
                 
                 <div style="width: 100%;"></div>
-                
-                <div>
-                    <a href="https://jinnycho.github.io/blog/rec1/">👨🏻‍💻 Book Recommendation v1.0</a>
-                    <img class="icon" src="https://jinnycho.github.io/img/next.svg" alt="next" />
-                </div>
                 
             </div>
             

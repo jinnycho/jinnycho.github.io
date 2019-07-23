@@ -6,10 +6,21 @@
     <description>Recent content in Blog on Jinny C</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 21 Jul 2019 00:58:01 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jul 2019 00:48:01 -0500</lastBuildDate>
     
 	<atom:link href="https://jinnycho.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>👨🏻‍💻 Book Recommendation v1.0</title>
+      <link>https://jinnycho.github.io/blog/rec1/</link>
+      <pubDate>Mon, 22 Jul 2019 00:48:01 -0500</pubDate>
+      
+      <guid>https://jinnycho.github.io/blog/rec1/</guid>
+      <description>Introduction There are 3 major approaches for recommendation systems: content-based, collaborative, and hybrid.
+ Content-based:
+ Recommend items to a user that are similar to the ones that user preferred in the past. For example, if Nancy likes &amp;lt;28 Days Later&amp;gt; 🧟‍♂️, we analyze the contents of the this movie like genre, country, year etc. After that analysis, we can deduce that Nancy will probably like &amp;lt;Train to Busan&amp;gt; as well.</description>
+    </item>
     
     <item>
       <title>👨🏻‍💻 Radiation Map of the World v1.0</title>
