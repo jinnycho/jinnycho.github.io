@@ -6,10 +6,20 @@
     <description>Recent content on Jinny C</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 10 Aug 2019 00:48:01 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 19 Aug 2019 00:48:01 -0500</lastBuildDate>
     
 	<atom:link href="https://jinnycho.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>👨🏻‍💻 Book Recommendation v2.0</title>
+      <link>https://jinnycho.github.io/blog/rec2/</link>
+      <pubDate>Mon, 19 Aug 2019 00:48:01 -0500</pubDate>
+      
+      <guid>https://jinnycho.github.io/blog/rec2/</guid>
+      <description>Introduction As a senior thesis, I did built a book recommendation systems (which I versioned it as v1.0). While it returned a satisfying result, I remember that we had to run the very performant desktop for days to build the utility matrix to get a prediction. Optimization using algorithm and numpy library helped but still took days.
+In 2019, I got to know more about Spark/Scala and its power. So I decided to use that instead and check the difference.</description>
+    </item>
     
     <item>
       <title>🏖 Summer vacation in Scandinavian countries</title>
