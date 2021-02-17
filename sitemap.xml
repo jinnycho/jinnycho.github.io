@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jinnycho.github.io/art/fox/</loc>
-    <lastmod>2020-02-16T00:48:01+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jinnycho.github.io/blog/rec2/</loc>
     <lastmod>2019-08-19T00:48:01-05:00</lastmod>
   </url>
@@ -43,16 +38,6 @@
   </url>
   
   <url>
-    <loc>https://jinnycho.github.io/art/blue/</loc>
-    <lastmod>2019-05-19T00:48:01+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jinnycho.github.io/art/haru/</loc>
-    <lastmod>2019-05-18T00:48:01-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jinnycho.github.io/blog/design-patterns/</loc>
     <lastmod>2019-05-07T00:48:01-05:00</lastmod>
   </url>
@@ -68,39 +53,8 @@
   </url>
   
   <url>
-    <loc>https://jinnycho.github.io/art/untitled-5/</loc>
-    <lastmod>2018-12-21T21:29:11-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jinnycho.github.io/art/untitled-4/</loc>
-    <lastmod>2018-12-16T19:40:59-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jinnycho.github.io/art/untitled-3/</loc>
-    <lastmod>2018-12-13T22:18:46-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jinnycho.github.io/art/untitled-2/</loc>
-    <lastmod>2018-12-09T03:11:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jinnycho.github.io/art/untitled-1/</loc>
-    <lastmod>2018-12-08T00:48:01-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jinnycho.github.io/about/</loc>
     <lastmod>2018-11-30T16:14:46-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jinnycho.github.io/art/</loc>
-    <lastmod>2020-02-16T00:48:01+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -116,7 +70,7 @@
   
   <url>
     <loc>https://jinnycho.github.io/</loc>
-    <lastmod>2020-02-16T00:48:01+00:00</lastmod>
+    <lastmod>2019-08-19T00:48:01-05:00</lastmod>
     <priority>0</priority>
   </url>
   
