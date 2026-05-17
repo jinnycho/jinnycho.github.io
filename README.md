@@ -24,3 +24,7 @@ And then
 ```
 npm run watch
 ```
+
+### To development
+- Update `Config.jsx` file accordingly
+- Run `npm run build` for building
