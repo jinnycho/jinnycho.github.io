@@ -13,6 +13,7 @@ import jinhaeText from '../writings/hobbies/gallivanting/jinhae.md';
 
 // Tech
 import myBlogHistoryText from '../writings/tech/create/myBlogHistory.md';
+import myGameUpdateText from '../writings/tech/create/myGameUpdate.md';
 
 // Fun Fact
 import platypusText from '../writings/funfact/animals/platypus.md';
@@ -70,7 +71,7 @@ const subCategoryIDToTitleIDs = {
     'gallivanting': ['jinhae'],
 
     // Tech
-    'create': ['myBlogHistory'],
+    'create': ['myBlogHistory', 'myGameUpdate'],
 
     // Fun Facts
     'animals': ['platypus', 'honeybadger'],
@@ -92,6 +93,7 @@ const contentsTitleIDToValue = {
 
     // Tech
     'myBlogHistory': 'The Evolution of My Blogging Journey',
+    'myGameUpdate': 'Halmi: The Evolution of Our Game So Far',
 
     // Fun Facts
     'platypus': 'An Animal Without A Stomach?!',
@@ -114,6 +116,7 @@ const contentsTitleIDToContentsContentValue = {
 
     // Tech
     'myBlogHistory': myBlogHistoryText,
+    'myGameUpdate': myGameUpdateText,
 
     // Fun Facts
     'platypus': platypusText,

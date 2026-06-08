@@ -28051,6 +28051,60 @@ It was a delightful 4 weeks. Waking up early and walking there for 40 minutes in
   // src/writings/tech/create/myBlogHistory.md
   var myBlogHistory_default = "# The Evolution of My Blogging Journey\n## 2023/10/15\nBelieve it or not, my blogging history goes back 5 years, with changes almost every year. I wanted to share my likes, dislikes, and how I created my all-time favorite version.\n\n### What I was looking for\n1. I want my blog to look unique & well designed.\n2. I want to write many blogs that are well organized.\n3. I'd love to have full control to add or change things on my blog as I go. (e.g. subscription)\n\n### Version 1 \u2605\u2606\u2606\u2606\u2606\nI used a static site generator called [Hugo](https://gohugo.io/). It was very well-documented and easy to set up with many interesting templates to choose from. The blog itself was loaded fast too. \n\nHowever, it was quite tricky to customize anything (at least at that time). All the 'templates' they offered were quite boring as well, to be honest. I didn't feel attached to it and quickly grew bored over time; it felt more like mass-produced IKEA furniture rather than a handmade piece, if that makes sense.\n\n![Blog version 2 alt ><](https://github.com/jinnycho/jinnycho.github.io/blob/main/src/assets/photos/blog1.jpeg?raw=true)\n\n\n### Version 2 \u2605\u2605\u2606\u2606\u2606\nMy second version was driven by my strong desire to have a very unique and artistic blog of my own. I just used good old `javascript` and `CSS`. I was largely inspired by early 2000s web style and I was a huge fan of pixel fonts. I also coded using [p5.js](https://p5js.org/) for the cool 3D effects on the front page because I liked the way it looks.\n\nHowever, I instinctively felt that I really needed better content organization. I was like, 'Should I use tags? Should I add a search engine?' I was worried about what would happen if I had 100 blog posts, even though I had only written 4. I also found that the web aesthetics of the 2000s with chunky pixel fonts were a bit hard to read. It felt like avant-garde design furniture, yet it wasn't particularly comfortable.\n\n![Blog version 2 alt ><](https://github.com/jinnycho/jinnycho.github.io/blob/main/src/assets/photos/blog2.png?raw=true)\n\n### Version 3 \u2605\u2605\u2605\u2606\u2606\nI focused a lot more on improving the content organization for the version 3. Charles inspired me to consider the mind map style and that's what I did. I continued to use `javascript` & `CSS`.\n\nHowever, the mindmap style turned out to be quite challenging. First, positioning each circle was not easy. Plus, as I added more circles, things started to look messy and harder to navigate. It looked worse on the mobile or smaller screen.\n\n![Blog version 3 alt ><](https://github.com/jinnycho/jinnycho.github.io/blob/main/src/assets/photos/blog3.png?raw=true)\n\n### Version 4 \u2605\u2605\u2605\u2605\u2606\nSo here we are, I did another major redesign & refacturing of the code. \n\nFirstly, I abandoned the conventional mindmap style and transitioned into a more tabular layout. Then I introduced the concept of categories and subcategories to efficiently organize my blogs. I still kept the 2000s web aesthetics with programmer fonts, but I dialed it back to make it less overwhelming.\n\nEngineering-wise, I definitely built it from scratch using `javascript` and `CSS`. However, I additionally used `React` to manage various states, from user interactions to URL routing. Using `react-router` was particularly satisfying because it allowed me to link to a particular post with a [URL like this](https://jinnycho.github.io/ideas/architecture/houseIdeas001). I also added a Subscribe button using `react-modal` and Cloudflare worker to notify readers when I write new blogs, with the hope that many people will see them. :D\n\nSo far, I'm very satisfied. It finally feels like a good cozy handmade furniture that looks good and comfortable to me. But I want to give 4 stars because now I need to write more. Time to get to work!";
 
+  // src/writings/tech/create/myGameUpdate.md
+  var myGameUpdate_default = `# Halmi: The Evolution of Our Game So far
+## 2026/06/07
+
+
+<div style="text-align: center;"><img src="https://github.com/jinnycho/jinnycho.github.io/blob/main/src/assets/photos/halmi.gif?raw=true" alt="halmi 1" style="width: 500px; max-width: 100%;"></div>
+
+To me, a good game is like a good animated movie. When it\u2019s really good, it sticks in my head for weeks. I find myself wondering how they made it, how they came up with the concept, who are creators, and who are their parents haha.. It goes on and on and on. I think about strategies, plot twists, different interpretations, what could have been done better. That's where my admiration started. And then I decided to give it a try myself. I realized that I was a bit more optimistic about the work but I'm very happy that it exists and is still WIP.
+I'd like to write here a little bit about what decisions we made, the progress of our game and some lessons learned.
+
+## Some major decisions
+Our checklist was simple. It had to support 3D, have a ton of community content and tutorials we could follow online, and it doesn't cost a shit ton of money. Looking at all those boxes, Unity was the best fit. Godot is a good, open source alternative (that's free!) if it makes more sense to make a 2D game especially.
+
+<div style="text-align: center;"><img src="https://github.com/jinnycho/jinnycho.github.io/blob/main/src/assets/photos/algorithm.png?raw=true" alt="engine_algorithm 4" style="width: 350px; max-width: 100%;"></div>
+
+For 3D modeling, I decided to learn & use Blender. It's a fascinating tool. Its physics engine is very impressive but we don't actually need it for our game, especially since it takes a lot of compute. However, we've focused on using it for modeling and animating the objects in the game. While there are some pretty decent AI 3D modeling tools out there right now, the technology still isn't quite where it needs to be for game development. The biggest issue is that AI-generated models are quite messy. For a performant game, keeping the face count and topology tight is critical. Learning Blender myself ensures I have complete control over our meshes and performance.
+
+<div style="text-align: center;">
+  <video width="500" style="max-width: 100%;" controls>
+    <source src="/src/assets/photos/blender.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+We used Shader Graph for pretty much all of our shader-related tasks. Shader programming to me has been brutal to debug and terrifying to look at. Shader Graph at least gives us a visual way to see what\u2019s going on, which makes troubleshooting a bit less painful.
+
+## Progress
+### Version 1
+We were initially drawn to the idea of a randomly generated world by its promise of near-infinite playability. What we found is that walking around our initial, naively generated world became boring after 30 seconds. We put a fair bit of work trying to make it more interesting: we added biomes, worked on generating more diverse terrain, and modeled different types of plants. And it was way more interesting! But humans are very, very good at finding patterns in the noise and even with these additions the world started to feel repetitive after five minutes or so of wandering. We could have continued down that path and made even more complex and interesting nature, perhaps with little villages or buildings to stumble upon, but that is not the game we set out to make. We want our game to provide many fun, strategy-filled hours! Given our limitations, we cannot pour effort into building out an interesting world and still have time left over to draft mechanisms that we\u2019ll be proud of.
+
+<div style="text-align: center;">
+  <video width="500" style="max-width: 100%;" controls>
+    <source src="/src/assets/photos/game_v1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+### Version 2
+So we decided to scope down a little bit. Instead of infinite, procedurally generated environment, we decided to pivot to a more constrained world. This constraint actually freed us up to focus on what we care about most: deep strategy and fascinating game mechanics. For example, we love Slay the Spire and Starcraft. Drawing inspiration from them, we\u2019ve landed on our core concept: a real-time strategy game using deck-building and card mechanics. It's still WIP but it's a lot more fun to play already. We've been playing at least 20 minutes, which we realized it's a big milestone.
+
+<div style="text-align: center;">
+  <video width="500" style="max-width: 100%;" controls>
+    <source src="/src/assets/photos/game_v2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+## Lessons Learned
+1. **Scope is everything**: There\u2019s always a tradeoff. If you want to build a massive, Minecraft-meets-Animal-Crossing universe, it requires an immense amount of time, effort, and money. Developing a sharp instinct for the right scope relative to your actual resources is a valuable skill.
+2. **Mechanics first, aesthetics second**: It\u2019s vital to nail the core game loops and mechanics before getting bogged down in the visual polish. Playable over pretty, always.
+3. **Over-communicate**: Clear, proactive communication reduces unnecessary friction.
+4. **Be kind to yourself**: Creating something from nothing is HARD. It is essential to practice empathy and gentleness\u2014both toward yourself and the people you are building with.
+5. **It's okay to pause sometimes**: It's okay to step back and reflect. It helps to shift focus to other priorities, and gain the distance you need to ensure you\u2019re still moving in the right direction.`;
+
   // src/writings/funfact/animals/platypus.md
   var platypus_default = `# Fun Facts About Platypus
 ## 2023/11/29
@@ -28234,7 +28288,7 @@ Honey badgers taught me so many lessons: resilience in the face of challenges, p
     "woodworking": ["myFirstTable", "powertools101"],
     "gallivanting": ["jinhae"],
     // Tech
-    "create": ["myBlogHistory"],
+    "create": ["myBlogHistory", "myGameUpdate"],
     // Fun Facts
     "animals": ["platypus", "honeybadger"]
   };
@@ -28251,6 +28305,7 @@ Honey badgers taught me so many lessons: resilience in the face of challenges, p
     "jinhae": "Possibly The Best City in South Korea",
     // Tech
     "myBlogHistory": "The Evolution of My Blogging Journey",
+    "myGameUpdate": "Halmi: The Evolution of Our Game So Far",
     // Fun Facts
     "platypus": "An Animal Without A Stomach?!",
     "honeybadger": "A True Spartan"
@@ -28268,6 +28323,7 @@ Honey badgers taught me so many lessons: resilience in the face of challenges, p
     "jinhae": jinhae_default,
     // Tech
     "myBlogHistory": myBlogHistory_default,
+    "myGameUpdate": myGameUpdate_default,
     // Fun Facts
     "platypus": platypus_default,
     "honeybadger": honeybadger_default
